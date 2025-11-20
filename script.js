@@ -207,7 +207,7 @@ function loadQuizQuestion() {
     quizPinyin.textContent = currentVocab.pinyin;
 
     // สร้างตัวเลือก (4 ตัวเลือก)
-    const allThaiTranslations = allLessons.flatMap(l => l.vocab).map(v => v.thai);
+    const allThaiTranslations = currentLessonVocab.map(v => v.thai);
     const correctTranslation = currentVocab.thai;
     
     // หาตัวเลือกที่ผิด 3 ตัวที่ไม่ซ้ำกัน
@@ -216,7 +216,7 @@ function loadQuizQuestion() {
         const randomIndex = Math.floor(Math.random() * allThaiTranslations.length);
         const randomTranslation = allThaiTranslations[randomIndex];
         if (randomTranslation !== correctTranslation && !incorrectOptions.includes(randomTranslation)) {
-            incorrectOptions.push(randomTranslation);
+        incorrectOptions.push(randomTranslation);
         }
     }
 
