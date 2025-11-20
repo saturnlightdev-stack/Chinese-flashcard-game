@@ -1,6 +1,6 @@
 /* Custom Fonts */
 body {
-    font-family: 'Noto Sans Thai', sans-serif;
+    font-family: 'Sarabun', sans-serif;
     background-color: #fcfcfc; /* พื้นหลังสีขาวนวล */
 }
 
@@ -22,7 +22,7 @@ body {
     display: block;
     font-size: 1em; /* คำอ่านเล็กกว่า */
     opacity: 0.7;
-    font-family: 'Noto Sans Thai', sans-serif; /* คำอ่านใช้ฟอนต์ปกติ */
+    font-family: 'Sarabun', sans-serif; /* คำอ่านใช้ฟอนต์ปกติ */
 }
 
 
@@ -125,19 +125,20 @@ body {
 }
 
 .vocab-hanzi {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #007bff;
     line-height: 1;
 }
 
 .vocab-pinyin {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #6c757d;
+    font-family: 'Sarabun', sans-serif;
 }
 
 .vocab-thai {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     font-family: 'Ma Shan Zheng', cursive;
     color: #28a745;
@@ -145,7 +146,7 @@ body {
 
 /* Quiz UI Styles */
 .quiz-hanzi {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #a52a2a;
 }
@@ -153,6 +154,7 @@ body {
 .quiz-pinyin {
     font-size: 1.5rem;
     color: #6c757d;
+    font-family: 'Sarabun', sans-serif;
 }
 
 .feedback-text {
@@ -176,7 +178,7 @@ body {
 }
 
 .quiz-option-btn:not([disabled]):hover {
-    background-color: #ff9c07; /* เปลี่ยนเป็นสีส้มเมื่อ hover */
+    background-color: #ff9c07; /* เปลี่ยนเป็นสีเหลืองเมื่อโฮเวอร์ */
     color: #212529;
 }
 
