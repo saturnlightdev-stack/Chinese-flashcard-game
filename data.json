@@ -5,48 +5,157 @@
             "title": "บทที่ 1 : คำทักทาย",
             "image": "/img/l1.png",  
             "vocab": [
-                {"hanzi": "你好", "pinyin": "nǐ hǎo", "thai": "สวัสดี"},
-                {"hanzi": "早上好", "pinyin": "zǎo shang hǎo", "thai": "อรุณสวัสดิ์"},
-                {"hanzi": "再见", "pinyin": "zài jiàn", "thai": "ลาก่อน"},
-                {"hanzi": "谢谢", "pinyin": "xiè xie", "thai": "ขอบคุณ"},
-                {"hanzi": "对不起", "pinyin": "duì bu qǐ", "thai": "ขอโทษ"}
+                {"hanzi": "你好", "pinyin": "Nǐ hǎo", "thai": "สวัสดี"},
+                {"hanzi": "再见", "pinyin": "Zài jiàn", "thai": "ลาก่อน"},
+                {"hanzi": "谢谢", "pinyin": "Xiè xie", "thai": "ขอบคุณ"},
+                {"hanzi": "对不起", "pinyin": "Duì bu qǐ", "thai": "ขอโทษ"},
+                {"hanzi": "没关系", "pinyin": "méi guānxi", "thai": "ไม่เป็นไร"},
+                {"hanzi": "你怎么样?", "pinyin": "Nǐ zěnme yàng?", "thai": "คุณสบายดีไหม?"},
+                {"hanzi": "我很好", "pinyin": "Wǒ hěn hǎo", "thai": "ฉันสบายดี"},
+                {"hanzi": "早上好", "pinyin": "Zǎo shàng hǎo", "thai": "อรุณสวัสดิ์"},
+                {"hanzi": "上午好", "pinyin": "Shàngwǔ hǎo", "thai": "สวัสดีตอนบ่าย"},
+                {"hanzi": "晚上好", "pinyin": "Wǎn shàng hǎo", "thai": "สวัสดีตอนเย็น"},
+                 {"hanzi": "晚安", "pinyin": "Wǎn ān", "thai": "ราตรีสวัสดิ์"},
+                {"hanzi": "喂", "pinyin": "Wèi", "thai": "ฮัลโหล/สวัสดี(โทรศัพท์)"},
+                {"hanzi": "最近好吗?", "pinyin": "Zuìjìn hǎo ma?", "thai": "ช่วงนี้เป็นอย่างไรบ้าง?"},
+                {"hanzi": "吃了吗?", "pinyin": "Chī le ma?", "thai": "กินข้าวหรือยัง?"},
+                {"hanzi": "很高兴认识你", "pinyin": "Hěn gāoxìng rènshi nǐ", "thai": "ยินดีที่ได้รู้จัก"}
             ]
         },
         {
             "id": 2,
-            "title": "บทที่ 2 : ครอบครัว",
+            "title": "บทที่ 2 : คำศัพท์ผลไม้",
             "image": "/img/l2.png",  
             "vocab": [
-                {"hanzi": "爸爸", "pinyin": "bà ba", "thai": "พ่อ"},
-                {"hanzi": "妈妈", "pinyin": "mā ma", "thai": "แม่"},
-                {"hanzi": "哥哥", "pinyin": "gē ge", "thai": "พี่ชาย"},
-                {"hanzi": "姐姐", "pinyin": "jiě jie", "thai": "พี่สาว"},
-                {"hanzi": "弟弟", "pinyin": "dì di", "thai": "น้องชาย"}
+                {"hanzi": "香蕉", "pinyin": "Xiāngjiāo", "thai": "กล้วย"},
+                {"hanzi": "椰子", "pinyin": "Yēzi", "thai": "มะพร้าว"},
+                {"hanzi": "芒果", "pinyin": "Mángguǒ", "thai": "มะม่วง"},
+                {"hanzi": "西瓜", "pinyin": "Xīguā", "thai": "แตงโม"},
+                {"hanzi": "木瓜", "pinyin": "Mùguā", "thai": "มะละกอ"},
+                {"hanzi": "榴莲", "pinyin": "Liúlián", "thai": "ทุเรียน"},
+                {"hanzi": "红毛丹", "pinyin": "Hóngmáodān", "thai": "เงาะ"},
+                {"hanzi": "荔枝", "pinyin": "Lìzhī", "thai": "ลิ้นจี่"},
+                {"hanzi": "兰萨果", "pinyin": "Lánsà guǒ", "thai": "ลองกอง"},
+                {"hanzi": "苹果", "pinyin": "Píngguǒ", "thai": "แอปเปิ้ล"},
+                {"hanzi": "橙子", "pinyin": "Chéngzi", "thai": "ส้ม"},
+                {"hanzi": "葡萄", "pinyin": "Pútáo", "thai": "องุ่น"},
+                {"hanzi": "桃子", "pinyin": "Táozi", "thai": "ลูกพีช"},
+                {"hanzi": "番石榴", "pinyin": "Fānshíliú", "thai": "ฝรั่ง"},
+                {"hanzi": "梨", "pinyin": "Lí", "thai": "ลูกแพร์"}
+
             ]
         },
         {
             "id": 3,
-            "title": "บทที่ 3 : ตัวเลข",
+            "title": "บทที่ 3 : คำศัพท์อาหาร",
             "image": "/img/l3.png",  
             "vocab": [
-                {"hanzi": "一", "pinyin": "yī", "thai": "หนึ่ง"},
-                {"hanzi": "二", "pinyin": "èr", "thai": "สอง"},
-                {"hanzi": "三", "pinyin": "sān", "thai": "สาม"},
-                {"hanzi": "四", "pinyin": "sì", "thai": "สี่"},
-                {"hanzi": "五", "pinyin": "wǔ", "thai": "ห้า"}
+                {"hanzi": "粥", "pinyin": "Zhōu", "thai": "ข้าวต้ม"},
+                {"hanzi": "饺子", "pinyin": "Jiǎozi", "thai": "เกี๊ยวซ่า"},
+                {"hanzi": "包子", "pinyin": "Bāozi", "thai": "ซาลาเปา"},
+                {"hanzi": "豆腐", "pinyin": "Dòufu", "thai": "เต้าหู้"},
+                {"hanzi": "面包", "pinyin": "Miànbāo", "thai": "ขนมปัง"},
+                {"hanzi": "比萨饼", "pinyin": "Bǐsàbǐng", "thai": "พิซซ่า"},
+                {"hanzi": "热狗", "pinyin": "Rè gǒu", "thai": "ฮอตดอก"},
+                {"hanzi": "牛排", "pinyin": "Niúpái", "thai": "สเต็ก"},
+                {"hanzi": "沙拉", "pinyin": "Shālā", "thai": "สลัด"},
+                {"hanzi": "酸奶", "pinyin": "Suānnǎi", "thai": "โยเกิร์ต"},
+                {"hanzi": "冰淇淋", "pinyin": "Bīngqílín", "thai": "ไอศกรีม"},
+                {"hanzi": "火锅", "pinyin": "Huǒguō", "thai": "หม้อไฟ"},
+                {"hanzi": "点心", "pinyin": "Diǎnxīn", "thai": "ติ่มซำ"},
+                {"hanzi": "宫保鸡丁", "pinyin": "Gōngbǎo jīdīng", "thai": "ไก่ผัดเสฉวน"},
+                {"hanzi": "北京烤鸭", "pinyin": "Běijīng kǎoyā", "thai": "เป็ดปักกิ่ง"}
             ]
         },
         {
             "id": 4,
-            "title": "บทที่ 4 : อาหารและเครื่องดื่ม",
+            "title": "บทที่ 4 : คำศัพท์อาชีพ",
             "image": "/img/l4.png",  
             "vocab": [
-                {"hanzi": "米饭", "pinyin": "mǐ fàn", "thai": "ข้าวสวย"},
-                {"hanzi": "面条", "pinyin": "miàn tiáo", "thai": "ก๋วยเตี๋ยว"},
-                {"hanzi": "水", "pinyin": "shuǐ", "thai": "น้ำ"},
-                {"hanzi": "茶", "pinyin": "chá", "thai": "ชา"},
-                {"hanzi": "咖啡", "pinyin": "kā fēi", "thai": "กาแฟ"}
+               {"hanzi": "老师", "pinyin": "Lǎoshī", "thai": "ครู"},
+                {"hanzi": "学生", "pinyin": "Xuéshēng", "thai": "นักเรียน"},
+                {"hanzi": "医生", "pinyin": "Yīshēng", "thai": "หมอ"},
+                {"hanzi": "律师", "pinyin": "Lǜshī", "thai": "ทนายความ"},
+                {"hanzi": "警察", "pinyin": "Jǐngchá", "thai": "ตำรวจ"},
+                {"hanzi": "军人", "pinyin": "Jūnrén", "thai": "ทหาร"},
+                {"hanzi": "商人", "pinyin": "Shāngrén", "thai": "นักธุรกิจ"},
+                {"hanzi": "厨师", "pinyin": "Chúshī", "thai": "พ่อครัว/แม่ครัว"},
+                {"hanzi": "司机", "pinyin": "Sījī", "thai": "คนขับรถ"},
+                {"hanzi": "农民", "pinyin": "Nóngmín", "thai": "ชาวนา"},
+                {"hanzi": "程序员", "pinyin": "Chéngxùyuán", "thai": "โปรแกรมเมอร์"},
+                {"hanzi": "歌手", "pinyin": "Gēshǒu", "thai": "นักร้อง"},
+                {"hanzi": "摄影师", "pinyin": "Shèyǐngshī", "thai": "ช่างภาพ"},
+                {"hanzi": "经理", "pinyin": "Jīnglǐ", "thai": "ผู้จัดการ"},
+                {"hanzi": "作家", "pinyin": "Zuòjiā", "thai": "นักเขียน"}
+            ]
+        },
+        {
+            "id": 5,
+            "title": "บทที่ 5 : คำศัพท์ของใช้",
+            "image": "/img/l5.png",  
+            "vocab": [
+                {"hanzi": "肥皂", "pinyin": "Féizào", "thai": "สบู่"},
+                {"hanzi": "牙刷", "pinyin": "Yáshuā", "thai": "แปรงสีฟัน"},
+                {"hanzi": "洗发水", "pinyin": "Xǐfàshuǐ", "thai": "แชมพู"},
+                {"hanzi": "梳子", "pinyin": "Shūzi", "thai": "หวี"},
+                {"hanzi": "剃须刀", "pinyin": "Tìxūdāo", "thai": "มีดโกน"},
+                {"hanzi": "镜子", "pinyin": "Jìngzi", "thai": "กระจก"},
+                {"hanzi": "垃圾桶", "pinyin": "Lājītǒng", "thai": "ถังขยะ"},
+                {"hanzi": "伞", "pinyin": "Sǎn", "thai": "ร่ม"},
+                {"hanzi": "钥匙", "pinyin": "Yàoshi", "thai": "กุญแจ"},
+                {"hanzi": "筷子", "pinyin": "Kuàizi", "thai": "ตะเกียบ"},
+                {"hanzi": "刀子", "pinyin": "Dāozi", "thai": "มีด"},
+                {"hanzi": "书", "pinyin": "Shū", "thai": "หนังสือ"},
+                {"hanzi": "杯子", "pinyin": "Bēizi", "thai": "แก้วน้ำ/ถ้วย"},
+                {"hanzi": "被子", "pinyin": "Bèizi", "thai": "ผ้าห่ม"},
+                {"hanzi": "枕头", "pinyin": "Zhěntou", "thai": "หมอน"}
+            ]
+        },
+        {
+            "id": 6,
+            "title": "บทที่ 6 : สถานที่",
+            "image": "/img/l6.png",  
+            "vocab": [
+                {"hanzi": "家", "pinyin": "Jiā", "thai": "บ้าน"},
+                {"hanzi": "学校", "pinyin": "Xuéxiào", "thai": "โรงเรียน"},
+                {"hanzi": "大学", "pinyin": "Dàxué", "thai": "มหาวิทยาลัย"},
+                {"hanzi": "公司", "pinyin": "Gōngsī", "thai": "บริษัท"},
+                {"hanzi": "银行", "pinyin": "Yínháng", "thai": "ธนาคาร"},
+                {"hanzi": "医院", "pinyin": "Yīyuàn", "thai": "โรงพยาบาล"},
+                {"hanzi": "超市", "pinyin": "Chāoshì", "thai": "ซูเปอร์มาร์เก็ต"},
+                {"hanzi": "机场", "pinyin": "Jīchǎng", "thai": "สนามบิน"},
+                {"hanzi": "火车站", "pinyin": "Huǒchēzhàn", "thai": "สถานีรถไฟ"},
+                {"hanzi": "宾馆", "pinyin": "Bīnguǎn", "thai": "โรงแรม"},
+                {"hanzi": "厨房", "pinyin": "Chúfáng", "thai": "ห้องครัว"},
+                {"hanzi": "卧室", "pinyin": "Wòshì", "thai": "ห้องนอน"},
+                {"hanzi": "工厂", "pinyin": "Gōngchǎng", "thai": "โรงงาน"},
+                {"hanzi": "山", "pinyin": "Shān", "thai": "ภูเขา"},
+                {"hanzi": "饭馆", "pinyin": "Fànguǎn", "thai": "ร้านอาหาร"}
+            ]
+        },
+        {
+            "id": 7,
+            "title": "บทที่ 7 : คำกริยา",
+            "image": "/img/l7.png",  
+            "vocab": [
+                {"hanzi": "吃", "pinyin": "Chī", "thai": "กิน"},
+                {"hanzi": "喝", "pinyin": "Hē", "thai": "ดื่ม"},
+                {"hanzi": "说", "pinyin": "Shuō", "thai": "พูด/บอก"},
+                {"hanzi": "听", "pinyin": "Tīng", "thai": "ฟัง/ได้ยิน"},
+                {"hanzi": "写", "pinyin": "Xiě", "thai": "เขียน"},
+                {"hanzi": "学习", "pinyin": "Xuéxí", "thai": "เรียน/ศึกษา"},
+                {"hanzi": "工作", "pinyin": "Gōngzuò", "thai": "ทำงาน"},
+                {"hanzi": "爱", "pinyin": "Ài", "thai": "รัก/ชอบ"},
+                {"hanzi": "睡觉", "pinyin": "Shuìjiào", "thai": "นอน"},
+                {"hanzi": "起床", "pinyin": "Qǐchuáng", "thai": "ตื่นนอน"},
+                {"hanzi": "问", "pinyin": "Wèn", "thai": "ถาม"},
+                {"hanzi": "回答", "pinyin": "Huídá", "thai": "ตอบ"},
+                {"hanzi": "洗澡", "pinyin": "Xǐzǎo", "thai": "อาบน้ำ"},
+                {"hanzi": "帮助", "pinyin": "Bāngzhù", "thai": "ช่วยเหลือ"},
+                {"hanzi": "买单", "pinyin": "Mǎidān", "thai": "จ่ายเงิน"}
             ]
         }
+
       ]
+      
 }
