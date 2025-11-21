@@ -1,0 +1,181 @@
+{
+    "lessons": [
+        {
+            "id": 1,
+            "title": "บทที่ 1 : คำทักทาย",
+            "image": "/img/l1.png",  
+            "vocab": [
+                {"hanzi": "你好", "pinyin": "Nǐ hǎo", "thai": "สวัสดี", "image": "vocab-img/1hello.png"},
+                {"hanzi": "再见", "pinyin": "Zài jiàn", "thai": "ลาก่อน","image": "vocab-img/1bye.png"},
+                {"hanzi": "谢谢", "pinyin": "Xiè xie", "thai": "ขอบคุณ", "image": "vocab-img/1thank.png"},
+                {"hanzi": "对不起", "pinyin": "Duì bu qǐ", "thai": "ขอโทษ", "image": "vocab-img/1sorry.png"},
+                {"hanzi": "没关系", "pinyin": "méi guānxi", "thai": "ไม่เป็นไร", "image": "vocab-img/1alright.png"},
+                {"hanzi": "你怎么样?", "pinyin": "Nǐ zěnme yàng??", "thai": "คุณสบายดีไหม?", "image": "vocab-img/1howru.png"},
+                {"hanzi": "我很好", "pinyin": "Wǒ hěn hǎo", "thai": "ฉันสบายดี", "image": "vocab-img/1fine.png"},
+                {"hanzi": "早上好", "pinyin": "Zǎo shàng hǎo", "thai": "อรุณสวัสดิ์", "image": "vocab-img/1morning.png"},
+                {"hanzi": "上午好", "pinyin": "Shàngwǔ hǎo", "thai": "สวัสดีตอนบ่าย", "image": "vocab-img/1noon.png"},
+                {"hanzi": "晚上好", "pinyin": "Wǎn shàng hǎo", "thai": "สวัสดีตอนเย็น", "image": "vocab-img/1evening.png"},
+                 {"hanzi": "晚安", "pinyin": "Wǎn ān", "thai": "ราตรีสวัสดิ์", "image": "vocab-img/1gn.png"},
+                {"hanzi": "喂", "pinyin": "Wèi", "thai": "ฮัลโหล/สวัสดี(โทรศัพท์)", "image": "vocab-img/1phonehi.png"},
+                {"hanzi": "最近好吗?", "pinyin": "Zuìjìn hǎo ma?", "thai": "ช่วงนี้เป็นอย่างไรบ้าง?", "image": "vocab-img/1howubeen.png"},
+                {"hanzi": "吃了吗?", "pinyin": "Chī le ma?", "thai": "กินข้าวหรือยัง?", "image": "vocab-img/1eatyet.png"},
+                {"hanzi": "很高兴认识你", "pinyin": "Hěn gāoxìng rènshi nǐ", "thai": "ยินดีที่ได้รู้จัก", "image": "vocab-img/1nice2meet.png"}
+            ]
+        },
+        {
+            "id": 2,
+            "title": "บทที่ 2 : คำศัพท์ผลไม้",
+            "image": "/img/l2.png",  
+            "vocab": [
+                {"hanzi": "香蕉", "pinyin": "Xiāngjiāo", "thai": "กล้วย", "image": "vocab-img/2banana.png"},
+                {"hanzi": "椰子", "pinyin": "Yēzi", "thai": "มะพร้าว", "image": "vocab-img/2coconut.png"},
+                {"hanzi": "芒果", "pinyin": "Mángguǒ", "thai": "มะม่วง", "image": "vocab-img/2mango.png"},
+                {"hanzi": "西瓜", "pinyin": "Xīguā", "thai": "แตงโม", "image": "vocab-img/2watermelon.png"},
+                {"hanzi": "木瓜", "pinyin": "Mùguā", "thai": "มะละกอ", "image": "vocab-img/2papaya.png"},
+                {"hanzi": "榴莲", "pinyin": "Liúlián", "thai": "ทุเรียน", "image": "vocab-img/2durian.png"},
+                {"hanzi": "红毛丹", "pinyin": "Hóngmáodān", "thai": "เงาะ", "image": "vocab-img/2rambutan.png"},
+                {"hanzi": "荔枝", "pinyin": "Lìzhī", "thai": "ลิ้นจี่", "image": "vocab-img/2litchi.png"},
+                {"hanzi": "兰萨果", "pinyin": "Lánsà guǒ", "thai": "ลองกอง", "image": "vocab-img/2long.png"},
+                {"hanzi": "苹果", "pinyin": "Píngguǒ", "thai": "แอปเปิ้ล", "image": "vocab-img/2apple.png"},
+                {"hanzi": "橙子", "pinyin": "Chéngzi", "thai": "ส้ม", "image": "vocab-img/2orange.png"},
+                {"hanzi": "葡萄", "pinyin": "Pútáo", "thai": "องุ่น", "image": "vocab-img/2grape.png"},
+                {"hanzi": "桃子", "pinyin": "Táozi", "thai": "ลูกพีช", "image": "vocab-img/2peach.png"},
+                {"hanzi": "番石榴", "pinyin": "Fānshíliú", "thai": "ฝรั่ง", "image": "vocab-img/2guava.png"},
+                {"hanzi": "梨", "pinyin": "Lí", "thai": "ลูกแพร์", "image": "vocab-img/2pear.png"}
+
+            ]
+        },
+        {
+            "id": 3,
+            "title": "บทที่ 3 : คำศัพท์อาหาร",
+            "image": "/img/l3.png",  
+            "vocab": [
+                {"hanzi": "粥", "pinyin": "Zhōu", "thai": "ข้าวต้ม", "image": "vocab-img/3ricesoup.png"},
+                {"hanzi": "饺子", "pinyin": "Jiǎozi", "thai": "เกี๊ยวซ่า", "image": "vocab-img/3gyoza.png"},
+                {"hanzi": "包子", "pinyin": "Bāozi", "thai": "ซาลาเปา", "image": "vocab-img/3salapao.png"},
+                {"hanzi": "豆腐", "pinyin": "Dòufu", "thai": "เต้าหู้", "image": "vocab-img/3tofu.png"},
+                {"hanzi": "面包", "pinyin": "Miànbāo", "thai": "ขนมปัง", "image": "vocab-img/3bread.png"},
+                {"hanzi": "比萨饼", "pinyin": "Bǐsàbǐng", "thai": "พิซซ่า", "image": "vocab-img/3pizza.png"},
+                {"hanzi": "热狗", "pinyin": "Rè gǒu", "thai": "ฮอตดอก", "image": "vocab-img/3hotdog.png"},
+                {"hanzi": "牛排", "pinyin": "Niúpái", "thai": "สเต็ก", "image": "vocab-img/3steak.png"},
+                {"hanzi": "沙拉", "pinyin": "Shālā", "thai": "สลัด", "image": "vocab-img/3salad.png"},
+                {"hanzi": "酸奶", "pinyin": "Suānnǎi", "thai": "โยเกิร์ต", "image": "vocab-img/3yoghurt.png"},
+                {"hanzi": "冰淇淋", "pinyin": "Bīngqílín", "thai": "ไอศกรีม", "image": "vocab-img/3ice.png"},
+                {"hanzi": "火锅", "pinyin": "Huǒguō", "thai": "หม้อไฟ", "image": "vocab-img/3hotpot.png"},
+                {"hanzi": "点心", "pinyin": "Diǎnxīn", "thai": "ติ่มซำ", "image": "vocab-img/3dimsum.png"},
+                {"hanzi": "宫保鸡丁", "pinyin": "Gōngbǎo jīdīng", "thai": "ไก่ผัดเสฉวน", "image": "vocab-img/3hotchicken.png"},
+                {"hanzi": "北京烤鸭", "pinyin": "Běijīng kǎoyā", "thai": "เป็ดปักกิ่ง", "image": "vocab-img/3bduck.png"}
+            ]
+        },
+        {
+            "id": 4,
+            "title": "บทที่ 4 : คำศัพท์อาชีพ",
+            "image": "/img/l4.png",  
+            "vocab": [
+                {"hanzi": "老师", "pinyin": "Lǎoshī", "thai": "ครู", "image": "vocab-img/4teacher.png"},
+                {"hanzi": "学生", "pinyin": "Xuéshēng", "thai": "นักเรียน", "image": "vocab-img/4student.png"},
+                {"hanzi": "医生", "pinyin": "Yīshēng", "thai": "หมอ", "image": "vocab-img/4doctor.png"},
+                {"hanzi": "律师", "pinyin": "Lǜshī", "thai": "ทนายความ", "image": "vocab-img/4lawyer.png"},
+                {"hanzi": "警察", "pinyin": "Jǐngchá", "thai": "ตำรวจ", "image": "vocab-img/4police.png"},
+                {"hanzi": "军人", "pinyin": "Jūnrén", "thai": "ทหาร", "image": "vocab-img/4soldier.png"},
+                {"hanzi": "商人", "pinyin": "Shāngrén", "thai": "นักธุรกิจ", "image": "vocab-img/4business.png"},
+                {"hanzi": "厨师", "pinyin": "Chúshī", "thai": "พ่อครัว/แม่ครัว", "image": "vocab-img/4chef.png"},
+                {"hanzi": "司机", "pinyin": "Sījī", "thai": "คนขับรถ", "image": "vocab-img/4driver.png"},
+                {"hanzi": "农民", "pinyin": "Nóngmín", "thai": "ชาวนา", "image": "vocab-img/4farmer.png"},
+                {"hanzi": "程序员", "pinyin": "Chéngxùyuán", "thai": "โปรแกรมเมอร์", "image": "vocab-img/4dev.png"},
+                {"hanzi": "歌手", "pinyin": "Gēshǒu", "thai": "นักร้อง", "image": "vocab-img/4singer.png"},
+                {"hanzi": "摄影师", "pinyin": "Shèyǐngshī", "thai": "ช่างภาพ", "image": "vocab-img/4photo.png"},
+                {"hanzi": "经理", "pinyin": "Jīnglǐ", "thai": "ผู้จัดการ", "image": "vocab-img/4manager.png"},
+                {"hanzi": "作家", "pinyin": "Zuòjiā", "thai": "นักเขียน", "image": "vocab-img/4writer.png"}
+            ]
+        },
+        {
+            "id": 5,
+            "title": "บทที่ 5 : คำศัพท์ของใช้",
+            "image": "/img/l5.png",  
+            "vocab": [
+                {"hanzi": "肥皂", "pinyin": "Féizào", "thai": "สบู่", "image": "vocab-img/5soap.png"},
+                {"hanzi": "牙刷", "pinyin": "Yáshuā", "thai": "แปรงสีฟัน", "image": "vocab-img/5brush.png"},
+                {"hanzi": "洗发水", "pinyin": "Xǐfàshuǐ", "thai": "แชมพู", "image": "vocab-img/5shampoo.png"},
+                {"hanzi": "梳子", "pinyin": "Shūzi", "thai": "หวี", "image": "vocab-img/5comb.png"},
+                {"hanzi": "剃须刀", "pinyin": "Tìxūdāo", "thai": "มีดโกน", "image": "vocab-img/5razer.png"},
+                {"hanzi": "镜子", "pinyin": "Jìngzi", "thai": "กระจก", "image": "vocab-img/5mirror.png"},
+                {"hanzi": "垃圾桶", "pinyin": "Lājītǒng", "thai": "ถังขยะ", "image": "vocab-img/5bin.png"},
+                {"hanzi": "伞", "pinyin": "Sǎn", "thai": "ร่ม", "image": "vocab-img/5umbrella.png"},
+                {"hanzi": "钥匙", "pinyin": "Yàoshi", "thai": "กุญแจ", "image": "vocab-img/5key.png"},
+                {"hanzi": "筷子", "pinyin": "Kuàizi", "thai": "ตะเกียบ", "image": "vocab-img/5chopstick.png"},
+                {"hanzi": "刀子", "pinyin": "Dāozi", "thai": "มีด", "image": "vocab-img/5knife.png"},
+                {"hanzi": "书", "pinyin": "Shū", "thai": "หนังสือ", "image": "vocab-img/5book.png"},
+                {"hanzi": "杯子", "pinyin": "Bēizi", "thai": "แก้วน้ำ/ถ้วย", "image": "vocab-img/5glass.png"},
+                {"hanzi": "被子", "pinyin": "Bèizi", "thai": "ผ้าห่ม", "image": "vocab-img/5blanket.png"},
+                {"hanzi": "枕头", "pinyin": "Zhěntou", "thai": "หมอน", "image": "vocab-img/5pillow.png"}
+            ]
+        },
+        {
+            "id": 6,
+            "title": "บทที่ 6 : สถานที่",
+            "image": "/img/l6.png",  
+            "vocab": [
+                {"hanzi": "家", "pinyin": "Jiā", "thai": "บ้าน", "image": "vocab-img/6house.png"},
+                {"hanzi": "学校", "pinyin": "Xuéxiào", "thai": "โรงเรียน", "image": "vocab-img/6school.png"},
+                {"hanzi": "大学", "pinyin": "Dàxué", "thai": "มหาวิทยาลัย", "image": "vocab-img/6uni.png"},
+                {"hanzi": "公司", "pinyin": "Gōngsī", "thai": "บริษัท", "image": "vocab-img/6company.png"},
+                {"hanzi": "银行", "pinyin": "Yínháng", "thai": "ธนาคาร", "image": "vocab-img/6bank.png"},
+                {"hanzi": "医院", "pinyin": "Yīyuàn", "thai": "โรงพยาบาล", "image": "vocab-img/6hospital.png"},
+                {"hanzi": "超市", "pinyin": "Chāoshì", "thai": "ซูเปอร์มาร์เก็ต", "image": "vocab-img/6super.png"},
+                {"hanzi": "机场", "pinyin": "Jīchǎng", "thai": "สนามบิน", "image": "vocab-img/6airport.png"},
+                {"hanzi": "火车站", "pinyin": "Huǒchēzhàn", "thai": "สถานีรถไฟ", "image": "vocab-img/6train.png"},
+                {"hanzi": "宾馆", "pinyin": "Bīnguǎn", "thai": "โรงแรม", "image": "vocab-img/6hotel.png"},
+                {"hanzi": "厨房", "pinyin": "Chúfáng", "thai": "ห้องครัว", "image": "vocab-img/6kitchen.png"},
+                {"hanzi": "卧室", "pinyin": "Wòshì", "thai": "ห้องนอน", "image": "vocab-img/6bedroom.png"},
+                {"hanzi": "工厂", "pinyin": "Gōngchǎng", "thai": "โรงงาน", "image": "vocab-img/6factory.png"},
+                {"hanzi": "山", "pinyin": "Shān", "thai": "ภูเขา", "image": "vocab-img/6mountain.png"},
+                {"hanzi": "饭馆", "pinyin": "Fànguǎn", "thai": "ร้านอาหาร", "image": "vocab-img/6restaurant.png"}
+            ]
+        },
+        {
+            "id": 7,
+            "title": "บทที่ 7 : คำกริยา",
+            "image": "/img/l7.png",  
+            "vocab": [
+                {"hanzi": "吃", "pinyin": "Chī", "thai": "กิน", "image": "vocab-img/7eat.png"},
+                {"hanzi": "喝", "pinyin": "Hē", "thai": "ดื่ม", "image": "vocab-img/7drink.png"},
+                {"hanzi": "说", "pinyin": "Shuō", "thai": "พูด/บอก", "image": "vocab-img/7talk.png"},
+                {"hanzi": "听", "pinyin": "Tīng", "thai": "ฟัง/ได้ยิน", "image": "vocab-img/7listen.png"},
+                {"hanzi": "写", "pinyin": "Xiě", "thai": "เขียน", "image": "vocab-img/7write.png"},
+                {"hanzi": "学习", "pinyin": "Xuéxí", "thai": "เรียน/ศึกษา", "image": "vocab-img/7study.png"},
+                {"hanzi": "工作", "pinyin": "Gōngzuò", "thai": "ทำงาน", "image": "vocab-img/7work.png"},
+                {"hanzi": "爱", "pinyin": "Ài", "thai": "รัก/ชอบ", "image": "vocab-img/7love.png"},
+                {"hanzi": "睡觉", "pinyin": "Shuìjiào", "thai": "นอน", "image": "vocab-img/7sleep.png"},
+                {"hanzi": "起床", "pinyin": "Qǐchuáng", "thai": "ตื่นนอน", "image": "vocab-img/7wakeup.png"},
+                {"hanzi": "问", "pinyin": "Wèn", "thai": "ถาม", "image": "vocab-img/7ask.png"},
+                {"hanzi": "回答", "pinyin": "Huídá", "thai": "ตอบ", "image": "vocab-img/7answer.png"},
+                {"hanzi": "洗澡", "pinyin": "Xǐzǎo", "thai": "อาบน้ำ", "image": "vocab-img/7shower.png"},
+                {"hanzi": "帮助", "pinyin": "Bāngzhù", "thai": "ช่วยเหลือ", "image": "vocab-img/7help.png"},
+                {"hanzi": "买单", "pinyin": "Mǎidān", "thai": "จ่ายเงิน", "image": "vocab-img/7pay.png"}
+            ]
+        },
+        {
+            "id": 8,
+            "title": "บทที่ 8 : คำคุณศัพท์",
+            "image": "/img/l8.png",
+            "vocab": [
+                {"hanzi": "好", "pinyin": "hǎo", "thai": "ดี", "image": "vocab-img/8good.png"},
+                {"hanzi": "坏", "pinyin": "huài", "thai": "แย่ / เสีย", "image": "vocab-img/8bad.png"},
+                {"hanzi": "长", "pinyin": "cháng", "thai": "ยาว", "image": "vocab-img/8long.png"},
+                {"hanzi": "短", "pinyin": "duǎn", "thai": "สั้น", "image": "vocab-img/8short.png"},
+                {"hanzi": "快", "pinyin": "kuài", "thai": "เร็ว", "image": "vocab-img/8fast.png"},
+                {"hanzi": "慢", "pinyin": "màn", "thai": "ช้า", "image": "vocab-img/8slow.png"},
+                {"hanzi": "美丽", "pinyin": "měilì", "thai": "สวยงาม", "image": "vocab-img/8beauty.png"},
+                {"hanzi": "干净", "pinyin": "gānjìng", "thai": "สะอาด", "image": "vocab-img/8clean.png"},
+                {"hanzi": "脏", "pinyin": "zāng", "thai": "สกปรก", "image": "vocab-img/8dirty.png"},
+                {"hanzi": "宽", "pinyin": "kuān", "thai": "กว้าง", "image": "vocab-img/8wide.png"},
+                {"hanzi": "重要", "pinyin": "zhòngyào", "thai": "สำคัญ", "image": "vocab-img/8important.png"},
+                {"hanzi": "安全", "pinyin": "ānquán", "thai": "ปลอดภัย", "image": "vocab-img/8safe.png"},
+                {"hanzi": "复杂", "pinyin": "fùzá", "thai": "ซับซ้อน", "image": "vocab-img/8compl.png"},
+                {"hanzi": "黑暗", "pinyin": "hēi'àn", "thai": "มืด", "image": "vocab-img/8dark.png"},
+                {"hanzi": "明显", "pinyin": "míngxiǎn", "thai": "ชัดเจน", "image": "vocab-img/8clear.png"}
+            ]            
+        }
+    ]
+}

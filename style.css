@@ -1,0 +1,253 @@
+/* Custom Fonts */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #fcfcfc; /* พื้นหลังสีขาวนวล */
+}
+
+/* Chinese Title Style */
+/* ในไฟล์ style.css */
+
+.chinese-title {
+    /* --- การควบคุมขนาดและตำแหน่งของ Element (.chinese-title) --- */
+    display: block; 
+    width: 100%; 
+    max-width: 800px; /* กำหนดความกว้างสูงสุดของป้าย */
+    
+    /* 1. ✅ แก้ไข: จัดให้อยู่กึ่งกลางหน้าจอ */
+    margin: 40px auto 30px auto; 
+    
+    padding: 15px 30px; 
+    padding-top: 52px;
+    
+    /* *สำคัญ*: การกำหนดความสูงของ Element ต้องสอดคล้องกับขนาดป้ายไม้ */
+    height: 200px;
+    
+    /* --- การควบคุมภาพพื้นหลัง (ป้ายไม้แดง) --- */
+    background-image: url('img/wood.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* 3. ✅ ปรับปรุง: การกำหนดขนาดภาพพื้นหลัง */
+    
+    background-size: 70% 450px; 
+
+    text-align: center; 
+}
+
+.chinese-title .hanzi {
+    display: block;
+    font-size: 1.1em; /* ตัวอักษรหลักใหญ่กว่า */
+    line-height: 1.2;
+    font-family: 'Sukhumvit Set', 'Kanit', 'Prompt', 'Tahoma', 'Thonburi', sans-serif;
+    color: rgb(248, 248, 246);
+}
+
+.chinese-title .pinyin {
+    display: block;
+    font-size: 1em; /* คำอ่านเล็กกว่า */
+    line-height: 1.2;
+    font-family: 'Comic Sans MS', 'Lucida Handwriting', 'Segoe Script', cursive; /* คำอ่านใช้ฟอนต์ปกติ */
+    color: #FFD700;
+}
+
+
+/* Lesson Cards Style */
+.lesson-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #fff0f0 0%, #ffebeb 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* ปรับ min-height ให้เหมาะสม */
+    
+    /* ----- เพิ่ม/แก้ไข 2 บรรทัดนี้ ----- */
+    width: 100%; /* ให้การ์ดใช้ความกว้างที่มีทั้งหมดก่อน */
+    max-width: 300px; /* ⬅️ กำหนดความกว้างสูงสุดคงที่ (Fix Width) */
+    /* ---------------------------------- */
+    
+    margin: 0 auto; /* จัดให้อยู่ตรงกลางของพื้นที่ col */
+}
+
+.lesson-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-card-img {
+    width: 100%;
+    height: 250px; /* หรือความสูงที่คุณต้องการ */
+    object-fit: cover;
+    /* ----- เพิ่ม/แก้ไขบรรทัดนี้ ----- */
+    object-position: center 30%; /* ⬅️ ลองปรับค่า % นี้ดู */
+    /* ------------------------------ */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.center-container {
+    /* ใช้ Flexbox เพื่อจัดองค์ประกอบให้อยู่กึ่งกลางหน้าจอ */
+    display: flex;
+    justify-content: center; /* จัดกลางในแนวนอน (ซ้าย-ขวา) */
+    align-items: center; /* จัดกลางในแนวตั้ง (บน-ล่าง) */
+    
+    /* 🎯 ใช้ 100vh แทน height: 100% เพื่อให้ยืดเต็มพื้นที่ที่มองเห็น */
+    min-height: 100vh; 
+    width: 100%;
+    
+    /* *สำคัญ* หากใช้ body เป็น center-container ต้องลบโค้ด margin/padding ซ้ำซ้อนออก */
+}
+.card-title {
+    font-weight: bold;
+    color: #a52a2a;
+    font-family: 'Sukhumvit Set', 'Kanit', 'Prompt', 'Tahoma', 'Thonburi', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Post-it Card Style (สำหรับ Quiz/Result) */
+.post-it-card {
+    border: none;
+    border-radius: 15px;
+    background-color: #fffacd; /* สีเหลืองอ่อนเหมือน Post-it */
+    box-shadow: 5px 5px 0px 0px rgba(255, 204, 0, 0.5); /* เงาเหมือนกระดาษกาว */
+    
+    width: 90%;
+    max-width: 400px; 
+    min-height: 250px;
+
+
+}
+
+/* Flashcard Styles (Flipping Effect) */
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 500px;
+    perspective: 1000px; /* ช่วยในการมองเห็น 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+}
+
+/* เมื่อมีคลาส 'flipped' ให้ทำการพลิก */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* ซ่อนด้านหลังเมื่อพลิก */
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.flip-card-front {
+    background-color: #e6f7ff; /* สีฟ้าอ่อนๆ สำหรับด้านหน้า */
+    color: #333;
+    cursor: pointer;
+    
+}
+
+.flip-card-back {
+    background-color: #d1ffc9; /* สีเขียวอ่อนๆ สำหรับด้านหลัง (คำแปล) */
+    color: #333;
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+/* 💡 2. กำหนด Z-Index และ Position ให้ Hanzi และปุ่มลำโพง */
+.vocab-hanzi, #audio-btn { 
+    position: relative; /* สำคัญ: ต้องมีเพื่อให้ z-index ทำงานเหนือรูปภาพ */
+    z-index: 10; 
+}
+
+.vocab-hanzi {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    line-height: 1;
+}
+
+.vocab-pinyin {
+    font-size: 2rem;
+    color: #6c757d;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.vocab-thai {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Ma Shan Zheng', cursive;
+    color: #28a745;
+}
+
+#vocab-image {
+
+    transition: opacity 0.3s ease;
+}
+
+#audio-btn svg {
+    fill: #007bff; /* ⬅️ ทำให้ไอคอนมีสีน้ำเงินเข้ม */
+    cursor: pointer;
+}
+
+/* Quiz UI Styles */
+.quiz-hanzi {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a52a2a;
+}
+
+.quiz-pinyin {
+    font-size: 1.5rem;
+    color: #6c757d;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.feedback-text {
+    font-weight: bold;
+    min-height: 25px; /* กันการกระโดดของ Layout */
+}
+
+.correct {
+    color: #28a745;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+.incorrect {
+    color: #dc3545;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+/* Quiz Option Button Hover */
+.quiz-option-btn {
+    transition: background-color 0.2s ease;
+}
+
+.quiz-option-btn:not([disabled]):hover {
+    background-color: #ff9c07; /* เปลี่ยนเป็นสีเหลืองเมื่อโฮเวอร์ */
+    color: #212529;
+}
+
+/* Custom Fonts */
+body {
+    font-family: 'Noto Sans Thai', sans-serif;
+    /* ⬅️ ลบบรรทัด background-color: #fcfcfc; ออก หรือคอมเมนต์ไว้ */
+
+    /* --- โค้ดสำหรับ Background Image เริ่มต้นตรงนี้ --- */
+    background-image: url('img/background.png'); /* ⬅️ เปลี่ยนชื่อไฟล์ให้ตรงกับที่คุณบันทึก */
+    background-size: cover;                      /* ปรับขนาดรูปภาพให้เต็มพื้นที่ */
+    background-repeat: no-repeat;                /* ไม่ให้รูปภาพซ้ำ */
+    background-attachment: fixed;                /* ทำให้พื้นหลังอยู่นิ่ง ไม่เลื่อนตามการ Scroll */
+    background-position: center center;          /* จัดตำแหน่งรูปภาพให้อยู่กึ่งกลาง */
+    /* --- สิ้นสุดโค้ดสำหรับ Background Image --- */
+}
