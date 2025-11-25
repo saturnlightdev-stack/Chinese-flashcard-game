@@ -78,22 +78,29 @@ async function loadData() {
  * สร้างการ์ดบทเรียนบนหน้า Main UI
  */
 function renderLessonCards() {
-    lessonCardsContainer.innerHTML = ''; // เคลียร์การ์ดเก่า
+    let html = "";
+
     allLessons.forEach(lesson => {
-        const cardHTML = `
+        html += `
             <div class="col">
                 <div class="card lesson-card h-100" data-lesson-id="${lesson.id}">
-                    <img src="${lesson.image}" class="lesson-card-img" alt="${lesson.title}" onerror="this.onerror=null;this.src='';">
+                    <img src="${lesson.image}" 
+                        class="lesson-card-img" 
+                        alt="${lesson.title}" 
+                        onerror="this.onerror=null;this.src='';"
+                        loading="lazy"
+                    />
                     <div class="card-body d-flex flex-column justify-content-end">
                         <h5 class="card-title">${lesson.title}</h5>
                     </div>
                 </div>
             </div>
         `;
-        lessonCardsContainer.innerHTML += cardHTML;
     });
 
-    // เพิ่ม Event Listener ให้กับการ์ดทั้งหมด
+    lessonCardsContainer.innerHTML = html;
+
+    // ✔ ต้องอยู่ในนี้
     document.querySelectorAll('.lesson-card').forEach(card => {
         card.addEventListener('click', () => {
             const lessonId = parseInt(card.getAttribute('data-lesson-id'));
@@ -122,18 +129,6 @@ function startLesson(lessonId) {
     updateFlashcard();
     switchUI(flashcardUI);
 }
-/**
- * ลบสัญลักษณ์วรรณยุกต์และตัวอักษรพิเศษออกจาก Pinyin 
- * @param {string} pinyin - Pinyin ที่มีวรรณยุกต์ (เช่น Nǐ hǎo)
- * @returns {string} - Pinyin ที่ไม่มีวรรณยุกต์ (เช่น ni hao)
- */
-function cleanPinyinForFile(pinyin) {
-    if (!pinyin) return '';
-    return pinyin
-        .normalize('NFD') // แยกสัญลักษณ์วรรณยุกต์ออกจากตัวอักษร
-        .replace(/[\u0300-\u036f]/g, "") // ลบสัญลักษณ์วรรณยุกต์ที่แยกออกมา
-        .toLowerCase();
-}
 
 /**
  * อัพเดทเนื้อหาบน Flashcard
@@ -148,20 +143,56 @@ function updateFlashcard() {
     
     // 💡 1. โค้ดสำหรับรูปภาพ
     if (vocab.image) {
-        vocabImage.src = vocab.image; 
-        vocabImage.classList.remove('d-none'); // แสดงรูปภาพ
+        vocabImage.style.opacity = '0'; 
+        vocabImage.classList.remove('d-none');
+
+        // 1.2 กำหนด src เพื่อให้เบราว์เซอร์เริ่มโหลด (ซึ่งจะถูกจัดการโดย loading="lazy" ใน HTML)
+        vocabImage.src = vocab.image;
+
+        // 1.3 เมื่อโหลดเสร็จ (แม้จะเป็น Lazy Load) ให้แสดงผล
+        vocabImage.onload = () => {
+            vocabImage.style.opacity = '1'; 
+            vocabImage.onload = null; // ป้องกันการเรียกซ้ำ
+        };
+        // 1.4 จัดการกรณีที่ภาพถูกโหลดจาก cache แล้ว (onload อาจไม่ทำงาน)
+        if (vocabImage.complete) {
+            vocabImage.style.opacity = '1';
+        }
     } else {
         vocabImage.src = '';
         vocabImage.classList.add('d-none'); // ซ่อนถ้าไม่มีรูปใน JSON
     }
 
-    // 💡 2. โค้ดสำหรับเสียง
-    // แปลง Pinyin ให้เป็นรูปแบบชื่อไฟล์ (เช่น Nǐ hǎo -> ni-hao)
-    const rawPinyin = vocab.pinyinWithoutTone || vocab.pinyin; // ใช้ field ใหม่ (ถ้ามี) หรือ field เดิม
-    const pinyinForFilename = rawPinyin.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
-
-    vocabAudio.src = `audio/${pinyinForFilename}.ogg`; // ใช้โฟลเดอร์ audio/
     
+    // 💡 2. โค้ดสำหรับเสียง
+    // ใช้ค่าจาก property 'audio' ที่ระบุใน JSON โดยตรง
+    if (vocab.audio) {
+        vocabAudio.src = vocab.audio;
+    } else {
+    // Logic หากไม่มีไฟล์เสียง
+        console.warn("Audio path not defined for:", vocab.hanzi);
+        vocabAudio.src = '';
+    }
+
+    // ✅ Preload รูป + เสียงคำศัพท์ถัดไป
+    if (currentVocabIndex < currentLessonVocab.length - 1) {
+        const nextVocab = currentLessonVocab[currentVocabIndex + 1];
+
+    // Preload รูป
+    if (nextVocab.image) {
+        const nextImg = new Image();
+        nextImg.src = nextVocab.image;
+    }
+
+    // Preload เสียง
+    if (nextVocab.audio) {
+        const nextAudio = new Audio();
+        nextAudio.preload = 'auto';
+        nextAudio.src = nextVocab.audio;
+    }
+}
+
+
     // รีเซ็ตการพลิก
     flashcardContainer.classList.remove('flipped');
     
@@ -312,7 +343,7 @@ function handleAnswer(selectedAnswer, correctAnswer) {
 
     // สร้างปุ่ม "คำถามถัดไป" หรือ "ดูผลลัพธ์"
     const nextQuizBtn = document.createElement('button');
-    nextQuizBtn.classList.add('btn', 'btn-info', 'mt-3');
+    nextQuizBtn.classList.add('btn', 'btn-primary', 'mt-3');
     nextQuizBtn.textContent = currentQuizIndex < currentQuizVocab.length - 1 ? 'คำถามถัดไป' : 'ดูผลลัพธ์';
     nextQuizBtn.addEventListener('click', () => {
         currentQuizIndex++;

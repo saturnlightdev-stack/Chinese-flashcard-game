@@ -8,24 +8,30 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
+
+    /* 🔒 กำหนดขนาดขั้นต่ำของ body เพื่อให้ scroll ได้เมื่อจอเล็ก */
+    min-width: 500px;
+    overflow-x: auto;
 }
 
 /* Chinese Title Style (ป้ายชื่อเรื่อง) */
 .chinese-title {
     /* --- การควบคุมขนาดและตำแหน่งของ Element (.chinese-title) --- */
     display: block; 
-    width: 90%; 
-    max-width: 900px; /* กำหนดความกว้างสูงสุดของป้าย */
+    max-width: 900px; 
+    width: 90%; /* 🔒 Fixed width - ไม่ยืดหด */
     margin: 40px auto 30px auto; /* จัดให้อยู่กึ่งกลางหน้าจอ */
     padding: 15px 30px; 
     padding-top: 52px;
     height: 190px;
     
+    
+
     /* --- การควบคุมภาพพื้นหลัง (ป้ายไม้แดง) --- */
     background-image: url('img/chinese-cloud.png'); 
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70% 450px; 
+    background-position: center center; /* 🔒 ให้อยู่กลางทั้ง 2 แกน */
+    background-size: 630px 450px;
     opacity: 0.95;
 
     text-align: center; 
@@ -38,7 +44,7 @@ body {
 
 .chinese-title .hanzi {
     display: block;
-    font-size: 1.5em; /* ตัวอักษรหลักใหญ่กว่า */
+    font-size: 3rem; /* ตัวอักษรหลักใหญ่กว่า */
     line-height: 1.2;
     font-family: 'Sukhumvit Set', 'Kanit', 'Prompt', 'Tahoma', 'Thonburi', sans-serif;
     color: #a52a2a; /* เก็บสีตัวอักษรให้เข้ากับป้าย */
@@ -46,9 +52,9 @@ body {
 
 .chinese-title .pinyin {
     display: block;
-    font-size: 1.5em; /* คำอ่านเล็กกว่า */
+    font-size: 3rem; /* คำอ่านเล็กกว่า */
     line-height: 1.2;
-    font-family: 'Sarabun', sans-serif; /* คำอ่านใช้ฟอนต์ปกติ */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* คำอ่านใช้ฟอนต์ปกติ */
     color: #ff7700;
     opacity: 0.7;
 }
@@ -61,12 +67,15 @@ body {
     border-radius: 15px; /* เก็บค่า 15px เพื่อความสม่ำเสมอ */
     background: linear-gradient(135deg, #fff0f0 0%, #ffebeb 100%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    min-height: 250px; 
+
+   /* 🔒 Fixed size - ไม่ยืดหด */
+    width: 250px;
+    min-width: 250px; /* 🔒 ป้องกันการหด */
+    max-width: 250px; /* 🔒 ป้องกันการยืด */
+    height: 350px;
     
-    width: 100%;
-    max-width: 250px; /* ⬅️ กำหนดความกว้างสูงสุดคงที่ */
-    
-    margin: 0 auto; /* จัดให้อยู่ตรงกลางของพื้นที่ col */
+    margin: 0; /* 🔒 ลบ margin เพราะใช้ gap ใน parent แทน */
+    flex-shrink: 0; /* 🔒 ไม่ให้หดตัว */
 }
 
 .lesson-card:hover {
@@ -90,6 +99,22 @@ body {
     align-items: center;
     min-height: 100vh; 
     width: 100%;
+    padding: 20px; /* เพิ่ม padding เผื่อจอเล็ก */
+}
+
+/* 🔒 Container สำหรับ Lesson Cards - Fixed width */
+#lesson-cards {
+    max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* 🔒 ระยะห่างระหว่างการ์ด */
+    justify-content: center; /* จัดให้อยู่กลาง */
+}
+
+#lesson-cards .col {
+    flex: none; /* 🔒 ไม่ให้ยืดหด */
+    width: auto; /* 🔒 ใช้ขนาดของ card */
 }
 
 /* Card Title */
@@ -100,6 +125,13 @@ body {
     font-size: 1.3rem;
 }
 
+/* 🔒 Fixed size สำหรับ buttons */
+.btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
+}
+
 /* Post-it Card Style (สำหรับ Quiz/Result) */
 .post-it-card {
     border: none;
@@ -107,9 +139,11 @@ body {
     background-color: #fffacd;
     box-shadow: 5px 5px 0px 0px rgba(255, 204, 0, 0.5);
     
-    width: 90%; /* ใช้ค่าที่ใหญ่กว่าสำหรับ Quiz/Result */
-    max-width: 400px; 
-    min-height: 250px;
+    /* 🔒 Fixed size */
+    width: 400px;
+    min-height: 350px;
+    margin: 0 auto;
+
 }
 
 /* Flashcard Styles (Flipping Effect) */
@@ -117,10 +151,19 @@ body {
     background-color: transparent;
     
     /* 🎯 ขนาดที่ปรับใหม่ตามที่คุณต้องการ */
-    width: 350px;
+    width: 90%; 
+    max-width: 350px;
     height: 500px;
     
     perspective: 1000px;
+    margin: 0 auto; /* จัดกลาง */
+}
+
+/* 💡 Media Query สำหรับมือถือ (ปรับขนาด Flashcard ให้สั้นลง) */
+@media (max-height: 700px) {
+    .flip-card {
+        height: 450px;
+    }
 }
 
 .flip-card-inner {
@@ -132,6 +175,7 @@ body {
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 15px;
+    -webkit-transform-style: preserve-3d; /* เพิ่มสำหรับ Safari/iOS */
 }
 
 .flip-card.flipped .flip-card-inner {
@@ -142,21 +186,27 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden; /* เพิ่มสำหรับ Safari/iOS */
     backface-visibility: hidden;
     border-radius: 15px;
 
     /* 🎯 เพิ่ม Flexbox เพื่อจัดองค์ประกอบภายใน (สำคัญมาก) */
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /* กระจายพื้นที่ว่างระหว่างองค์ประกอบ */
+    justify-content: space-around;/* กระจายพื้นที่ว่างระหว่างองค์ประกอบ */
     align-items: center;
     padding: 20px;
+    /* 🔧 แก้ไขปัญหาตัวอักษรทะลุบนมือถือ */
+    -webkit-transform: translateZ(0); /* Force hardware acceleration */
+    transform: translateZ(0);
+
 }
 
 .flip-card-front {
     background-color: #e6f7ff;
     color: #333;
     cursor: pointer;
+    padding-top: 20px;
 }
 
 .flip-card-back {
@@ -166,7 +216,24 @@ body {
     cursor: pointer;
 }
 
+
 /* Vocab Content Styles */
+/* จัดกลางทุกอย่างในนี้ให้กลางจอเสมอ */
+.vocab-container {
+    display: flex;
+    justify-content: center; /* กลางแนวนอน */
+    align-items: center;    /* กลางแนวตั้ง */
+    min-height: 100vh;      /* ความสูงเต็มจอ */
+    width: 100%;
+    padding: 20px;
+}
+
+/* vocab-card: ไม่ต้องเปลี่ยนแปลง */
+.vocab-card {
+    /* ... ขนาดและการจัดแต่ง ... */
+    flex-shrink: 0; 
+}
+
 .vocab-hanzi, #audio-btn { 
     position: relative; 
     z-index: 10; 
@@ -177,12 +244,16 @@ body {
     font-weight: bold;
     color: #007bff;
     line-height: 1;
+   
 }
 
 .vocab-pinyin {
     font-size: 2rem;
     color: #6c757d;
     font-family: 'Sarabun', sans-serif;
+    line-height: 1; /* ให้ชิด Hanzi */
+    margin-top: 0;  /* ป้องกันมีระยะซ้อนจาก CSS อื่น */
+ 
 }
 
 .vocab-thai {
@@ -194,14 +265,13 @@ body {
 
 /* 🎯 โค้ดสำหรับ Vocab Image ที่คุณต้องการให้ใหญ่ขึ้น */
 #vocab-image {
-    width: 100%;
-    height: auto;
-    max-width: 300px; /* ใช้ความกว้างเกือบเต็มการ์ด 350px */
-    max-height: 250px; /* กำหนดความสูงสูงสุดเพื่อให้มีที่ว่างสำหรับข้อความ */
+    width: 300px; /* 🔒 Fixed width */
+    height: 250px; /* 🔒 Fixed height */
     object-fit: contain; /* รักษาสัดส่วนภาพ */
     display: block;
     margin: 0 auto;
     transition: opacity 0.3s ease;
+    margin-bottom: 30px !important;
 }
 
 #audio-btn svg {
@@ -240,9 +310,16 @@ body {
 /* Quiz Option Button Hover */
 .quiz-option-btn {
     transition: background-color 0.2s ease;
+    font-size: 1.2rem; /* 🔒 Fixed size */
+    padding: 0.75rem 1rem;
 }
 
 .quiz-option-btn:not([disabled]):hover {
     background-color: #ff9c07;
     color: #212529;
+}
+
+/* 🔒 ป้องกันการ zoom บนมือถือเวลากด input/button */
+input, button, select, textarea {
+    font-size: 16px !important;
 }
