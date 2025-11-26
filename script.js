@@ -122,12 +122,32 @@ function startLesson(lessonId) {
 
     currentLessonVocab = lesson.vocab;
     currentVocabIndex = 0;
-    
+
     // ตั้งค่าชื่อบทเรียน
     lessonTitleDisplay.forEach(el => el.textContent = lesson.title);
-    
+
+
+    // ✅ Preload รูปแรกและเสียงแรก พร้อมแสดง UI ทันที
+    if (currentLessonVocab.length > 0) {
+        const firstVocab = currentLessonVocab[0];
+        
+        // Preload รูปแรก (ไม่ต้องรอ)
+        if (firstVocab.image) {
+            const preloadImg = new Image();
+            preloadImg.src = firstVocab.image;
+        }
+        
+        // Preload เสียงแรก (ไม่ต้องรอ)
+        if (firstVocab.audio) {
+            const audioPreload = new Audio(firstVocab.audio);
+            audioPreload.preload = "auto";
+        }
+    }
+
+    // ✅ แสดง UI ทันทีโดยไม่ต้องรอโหลดรูป
     updateFlashcard();
     switchUI(flashcardUI);
+
 }
 
 /**
@@ -175,22 +195,22 @@ function updateFlashcard() {
     }
 
     // ✅ Preload รูป + เสียงคำศัพท์ถัดไป
-    if (currentVocabIndex < currentLessonVocab.length - 1) {
-        const nextVocab = currentLessonVocab[currentVocabIndex + 1];
-
+    const nextIndex = currentVocabIndex + 1;
+    if (nextIndex < currentLessonVocab.length) {
+        const nextVocab = currentLessonVocab[nextIndex];
+    
     // Preload รูป
-    if (nextVocab.image) {
-        const nextImg = new Image();
-        nextImg.src = nextVocab.image;
-    }
+        if (nextVocab.image) {
+            const img = new Image();
+            img.src = nextVocab.image;
+        }
 
     // Preload เสียง
-    if (nextVocab.audio) {
-        const nextAudio = new Audio();
-        nextAudio.preload = 'auto';
-        nextAudio.src = nextVocab.audio;
+        if (nextVocab.audio) {
+            const audio = new Audio(nextVocab.audio);
+            audio.preload = "auto";
+        }
     }
-}
 
 
     // รีเซ็ตการพลิก
@@ -216,11 +236,14 @@ flashcardContainer.addEventListener('click', () => {
 
 // 💡 เพิ่ม Event Listener สำหรับปุ่มเสียง
 audioBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // สำคัญ: หยุดการพลิกการ์ดเมื่อกดปุ่มเสียง
-    vocabAudio.currentTime = 0; // ตั้งค่าเวลาเล่นกลับไปเริ่มต้น
-    vocabAudio.play().catch(error => {
-        console.error("Error playing audio:", error);
-    });
+    e.stopPropagation();
+
+    if (!vocabAudio.paused) {
+        vocabAudio.pause();
+    }
+
+    vocabAudio.currentTime = 0;
+    vocabAudio.play().catch(err => console.warn(err));
 });
 
 nextBtn.addEventListener('click', () => {
@@ -250,11 +273,20 @@ testReadyBtn.addEventListener('click', () => {
 /**
  * เริ่มแบบทดสอบ
  */
+
+// ฟังก์ชันสุ่มแบบปลอดภัยกว่า sort()
+function shuffleArray(array) {
+    return array
+        .map(item => ({ item, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ item }) => item);
+}
+
 function startQuiz() {
     score = 0;
     currentQuizIndex = 0;
     // สุ่มลำดับคำศัพท์
-    currentQuizVocab = [...currentLessonVocab].sort(() => Math.random() - 0.5); 
+    currentQuizVocab = shuffleArray([...currentLessonVocab]);
     
     quizBackToMainBtn.classList.add('d-none');
     
