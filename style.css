@@ -329,7 +329,7 @@ body {
 }
 
 .vocab-hanzi {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #007bff;
     line-height: 1;
@@ -337,7 +337,7 @@ body {
 }
 
 .vocab-pinyin {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #6c757d;
     font-family: 'Sarabun', sans-serif;
     line-height: 1; /* ให้ชิด Hanzi */
@@ -346,7 +346,7 @@ body {
 }
 
 .vocab-thai {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     font-family: 'Sukhumvit Set', 'Kanit', 'Prompt', 'Tahoma', 'Thonburi', sans-serif;
     color: #474747;
