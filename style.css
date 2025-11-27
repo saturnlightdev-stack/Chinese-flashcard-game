@@ -238,8 +238,8 @@ body {
     /* 3. Lesson Cards */
     .lesson-card {
         width: 90%;
-        min-width: 0;
-        max-width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     #lesson-cards {
@@ -247,8 +247,7 @@ body {
     flex-wrap: wrap;         
     justify-content: center; 
     gap: 15px;
-    margin-left: auto;       
-    margin-right: auto;
+    margin: 0 auto;
     padding-left: 0 !important;
     padding-right: 0 !important;
     }
