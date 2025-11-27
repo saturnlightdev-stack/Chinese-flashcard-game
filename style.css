@@ -124,6 +124,7 @@ body {
     font-size: 1.5rem;
     padding: 0.8rem 1.5rem;
     white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
+    
 }
 
 /* Post-it Card Style (สำหรับ Quiz/Result) */
@@ -337,7 +338,7 @@ body {
 }
 
 .vocab-pinyin {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #6c757d;
     font-family: 'Sarabun', sans-serif;
     line-height: 1; /* ให้ชิด Hanzi */
