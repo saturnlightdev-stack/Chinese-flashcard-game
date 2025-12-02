@@ -238,19 +238,25 @@ body {
 
     /* 3. Lesson Cards */
     .lesson-card {
-        width: 90%;
+        width: 100%;
         max-width: 300px;
-        margin: 0 auto;
+        margin: 0;
     }
 
     #lesson-cards {
+    width: 100%;
+    max-width: 350px;
     display: flex;           
     flex-wrap: wrap;         
     justify-content: center; 
     gap: 15px;
     margin: 0 auto;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding: 0 15px;
+    }
+    #lesson-cards > div { 
+        width: 100%; /* ให้ div ที่ครอบการ์ด กว้างเต็มพื้นที่ */
+        max-width: 300px;
+        flex: none; 
     }
 
 }

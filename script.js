@@ -339,7 +339,7 @@ function handleAnswer(selectedAnswer, correctAnswer) {
         quizFeedback.classList.remove('incorrect');
         quizFeedback.classList.add('correct');
     } else {
-        quizFeedback.textContent = `❌ อาจจะยังน้าาาา อันนี้แปลว่า ${correctAnswer}`;
+        quizFeedback.textContent = `❌ อาจจะยังน้าาา อันนี้แปลว่า ${correctAnswer}`;
         quizFeedback.classList.remove('correct');
         quizFeedback.classList.add('incorrect');
     }
