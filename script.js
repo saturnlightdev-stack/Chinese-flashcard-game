@@ -82,7 +82,7 @@ function renderLessonCards() {
 
     allLessons.forEach(lesson => {
         html += `
-            <div class="col">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="card lesson-card h-100" data-lesson-id="${lesson.id}">
                     <img src="${lesson.image}" 
                         class="lesson-card-img" 
@@ -339,7 +339,7 @@ function handleAnswer(selectedAnswer, correctAnswer) {
         quizFeedback.classList.remove('incorrect');
         quizFeedback.classList.add('correct');
     } else {
-        quizFeedback.textContent = `❌ อาจจะยังน้ааา อันนี้แปลว่า ${correctAnswer}`;
+        quizFeedback.textContent = `❌ อาจจะยังน้าาาา อันนี้แปลว่า ${correctAnswer}`;
         quizFeedback.classList.remove('correct');
         quizFeedback.classList.add('incorrect');
     }
